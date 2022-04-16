@@ -3,15 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+
+    </style>
 </head>
 <body>
 <form>
-    <table>
+    <table style="background: orange" >
         <tr>
-            <th>
+            <th style="background: aquamarine" colspan="2">
                 ĐĂNG KÍ HỌC VIÊN
             </th>
-
+        </tr>
+        <tr>
+            <th>Họ và tên</th>
+            <td><input type="text" name="yourname"></td>
+        </tr>
+        <tr>
+            <th>Ngày sinh</th>
+            <td><input type="date" name="ngay" ></td>
+        </tr>
+        <tr>
+            <th>Giới tính</th>
+            <td>
+                <input type="radio" name="selec" value="Nam"> Nam
+                <input type="radio" name="selec" value="Nữ"> Nữ
+            </td>
+        </tr>
+        <tr>
+            <th>Địa chỉ</th>
+            <td><textarea></textarea></td>
+        </tr>
+        <tr>
+           <th>Lớp</th>
+            <td><select>
+                <option> --Chọn lớp--</option>
+                <option> Lớp A</option>
+                <option> Lớp B</option>
+                <option> Lớp C</option>
+            </select> </td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td><input type="text" name="Email"> </td>
+        </tr>
+        <tr>
+            <th>Điện thoại</th>
+            <td><input type="text" name="phone"> </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Đăng kí" >
+                <input type="reset" value="Nhập lại" >
+            </td>
         </tr>
     </table>
 </form>
