@@ -6,7 +6,7 @@ function diemTB(){
     let arg ;
 
     arg = (parseFloat(vl) + parseFloat(hh) + parseFloat(s))/3;
-    document.write("điểm trung bình là: "+ arg);
+    alert("điểm trung bình là: "+ arg);
 
 }
 
@@ -24,7 +24,7 @@ function S_tron() {
     let r = parseFloat(prompt("Nhập bán kính R"));
     const pi =3.14;
     let dttron;
-    dttron = pi * r^2;
+    dttron = pi * r*r;
     alert("Diện tích hình tròn là: "+ dttron);
 }
 

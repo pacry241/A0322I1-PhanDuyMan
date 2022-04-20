@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Ứng dụng chuyển đổi tiền tệ</title>
+    <style>
+        tr{
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <table style="width: 300px">
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+
+        </tr>
+        <tr>
+            <td><input type="number" name="amount" id="amount"/></td>
+            <td>
+                <select id="vao">
+                    <option value="1">Viet Nam</option>
+                    <option value="2">USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="ra">
+                    <option value="3">Viet Nam</option>
+                    <option value="4">USD</option>
+                </select>
+            </td>
+            <td>
+                <button name="Convart" onclick="quydoi()">Convart</button>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <span id="xuat" style="display: block" name="Ket qua">Ket qua</span>
+            </td>
+        </tr>
+
+    </table>
+
+
+<script>
+    function quydoi(){
+        let vao = document.getElementById("vao").value;
+        let ra= document.getElementById("ra").value;
+        let gtri = parseFloat(document.getElementById("amount").value);
+
+        if ((vao === "1" && ra === "3") || (vao === "2" && ra==="4"))
+            document.getElementById("xuat").innerText="Nhap lai";
+        else if (vao === "1" && ra === "4"){
+            gtri= gtri / 23000 ;
+            document.getElementById("xuat").innerHTML=gtri + " $";}
+        else if (vao === "2" && ra === "3"){
+            gtri= gtri *23000;
+            document.getElementById("xuat").innerHTML=gtri + " VND";
+        }
+    }
+
+</script>
+</body>
+</html>
