@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Máy tính đơn giản
+    </title>
+</head>
+<body>
+<table border="1px">
+    <tr>
+        <td colspan="4">
+            <div><p id="kq"></p></div>
+        </td>
+    </tr>
+    <tr>
+        <td><button value="1" onclick="nhap('1')">1</button> </td>
+        <td><button value="2" onclick="nhap('2')">2</button> </td>
+        <td><button value="3" onclick="nhap('3')">3</button> </td>
+        <td><button value="+" onclick="nhap('+')">+</button> </td>
+    </tr>
+    <tr>
+        <td><button value="4" onclick="nhap('4')">4</button> </td>
+        <td><button value="5" onclick="nhap('5')">5</button> </td>
+        <td><button value="6" onclick="nhap('6')">6</button> </td>
+        <td><button value="-" onclick="nhap('-')">-</button> </td>
+    </tr>
+    <tr>
+        <td><button value="7" onclick="nhap('7')">1</button> </td>
+        <td><button value="8" onclick="nhap('8')">2</button> </td>
+        <td><button value="9" onclick="nhap('9')">3</button> </td>
+        <td><button value="*" onclick="nhap('*')">+</button> </td>
+    </tr>
+    <tr>
+        <td><button value="c" onclick="nhap('c')">C</button> </td>
+        <td><button value="0" onclick="nhap('0')">0</button> </td>
+        <td><button value="=" onclick="nhap('=')">=</button> </td>
+        <td><button value="/" onclick="nhap('/')">/</button> </td>
+    </tr>
+</table>
+<script>
+    function nhap(x) {
+        let value = document.getElementById("kq").innerText;
+        switch (x) {
+            case "1":
+            case "2":
+            case "3":
+            case "4":
+            case "5":
+            case "6":
+            case "7":
+            case "8":
+            case "9":
+            case "0":
+            case "+":
+                value = value + x;
+                break;
+            case "-":
+                value = value + x;
+                break;
+            case "*":
+                value = value + x;
+                break;
+            case "/":
+                value = value + x;
+                break;
+            case "=":
+                value = eval(value);
+                break;
+            case "c":
+                value = document.getElementById("kq").innerText="";
+                break;
+
+        }
+        document.getElementById("kq").innerText= value;
+
+    }
+</script>
+</body>
+</html>
