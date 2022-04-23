@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài_11</title>
+</head>
+<body>
+<script>
+    /*
+    *30% thuế thu nhập nếu lương là 15 triệu
+
+    20% thuế thu nhập nếu lương từ 7 đến 15 triệu
+
+    10% thuế thu nhập nếu lương dưới 7 triệu
+    * */
+    let tienluong = parseInt(prompt("Nhập tiền lương của bạn: "));
+    let tienthue;
+    let sothue;
+    if (tienluong > 15){
+        tienluong = parseInt(prompt("Nhập lại tiền lương của bạn: "));
+    }else if (tienluong == 15){
+        tienthue= tienluong*30/100;
+        sothue = 30;
+    }else if (tienluong <15 && tienluong >= 7){
+        tienthue = tienluong*20/100;
+        sothue = 20;
+    }else{
+        tienthue = tienluong*10/100;
+        sothue= 10;
+    }
+    alert("Tiền thuế cá nhân là "+tienthue+" tr đồng với số thuế tương ứng "+sothue);
+</script>
+</body>
+</html>

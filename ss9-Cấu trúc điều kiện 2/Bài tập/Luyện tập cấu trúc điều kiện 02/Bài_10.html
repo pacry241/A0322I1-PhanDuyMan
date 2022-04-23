@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài_10</title>
+</head>
+<body>
+<script>
+    // TT	    Số kWh sử dụng	      Giá bán điện (đồng/kWh)
+    // Bậc 1	Cho kWh từ 0 - 50	    1.678
+    // Bậc 2	Cho kWh từ 51 - 100	    1.734
+    // Bậc 3	Cho kWh từ 101 - 200	2.014
+    // Bậc 4	Cho kWh từ 201 - 300	2.536
+    // Bậc 5	Cho kWh từ 301 - 400	2.834
+    // Bậc 6	Cho kWh từ 401 trở lên	2.927
+
+    let dien_sd = parseFloat(prompt("Nhập số điện của bạn...kWh"));
+    let tiendien ;
+    if (dien_sd <= 50){
+        tiendien = dien_sd*1.678;
+    }else if (dien_sd <= 100){
+        tiendien = 50*1.678 + (dien_sd-50)*1.734;
+    }else if(dien_sd <= 200){
+        tiendien = 50*1.678 + 50*1.734 +(dien_sd-100)*2.014;
+    }else if (dien_sd <= 300){
+        tiendien =  50*1.678 + 50*1.734 + 100*2.014 + (dien_sd-200)*2.536;
+    }else if (dien_sd <= 400){
+        tiendien =  50*1.678 + 50*1.734 + 100*2.014 + 100*2.536 + (dien_sd-300)*2.834;
+    }else {
+        tiendien = 50*1.678 + 50*1.734 + 100*2.014 + 100*2.536 + 100*2.834 + (dien_sd-400)*2.927;
+    }
+    alert("Tiền điện của bạn là: "+ tiendien*1000 + " dồng/kWh");
+</script>
+</body>
+</html>
