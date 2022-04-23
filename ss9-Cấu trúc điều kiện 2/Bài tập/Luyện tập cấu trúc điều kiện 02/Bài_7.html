@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài_7</title>
+</head>
+<body>
+<script>
+    //Giải phương trình bậc 2
+    alert("Phương trình bậc 2 có dạng Ax^2 +Bx + C = 0");
+    let a = parseFloat(prompt("Nhập số a ="));
+    let b = parseFloat(prompt("Nhập số b ="));
+    let c = parseFloat(prompt("Nhập số c = "));
+    let denta = Math.pow(b,2)-4*a*c;
+    let x_1;
+    let x_2;
+    if (a == 0 ){
+        if (b == 0){
+            if (c==0){
+                alert("có vô số nghiệm");
+            }else{
+                alert("phương trình vô nghiệm");
+            }
+        }else{
+            x_1=-c/b;
+            alert("Phương trình có một nghiệm x= "+ x_1);
+        }
+    }else {
+        if (denta>0){
+            x_1=(-b-Math.sqrt(denta))/2/a;
+            x_2=(-b+Math.sqrt(denta))/2/a;
+            alert("phương trình có 2 nghiệm là " +x_1 +" và " + x_2);
+        }else if (denta == 0){
+            x_1=-b/2/a;
+            alert("phương trình có nghiệm kép"+ x_1);
+        }else {
+            alert("Phương trình vô nghiệm")
+        }
+    }
+</script>
+</body>
+</html>

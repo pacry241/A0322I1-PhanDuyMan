@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài_7</title>
+</head>
+<body>
+<!--Viết chương trình để tính cước điện thoại bàn cho một hộ gia đình với các thông số như sau:
+
+Phí thuê bao bắt buộc là 25 nghìn.
+
+600 đồng cho mỗi gọi của 50 phút đầu tiên.
+
+400 đồng cho mỗi phút gọi của 150 phút tiếp theo.
+
+200 đồng cho bất kỳ mỗi phút nào sau 200 phút đầu tiên.-->
+<script>
+    let sophut = parseInt(prompt("Nhập số phút đã gọi : "));
+    let phiscd = 25000;
+    let tong;
+    let phicuoc;
+    if (sophut > 200){
+        phicuoc= (sophut-200)*200 +150*400+50*600;
+    }else if(sophut >50){
+        phicuoc= (sophut-50)*400+50*600;
+    }else
+        phicuoc= sophut*600;
+    tong = phiscd + phicuoc;
+    alert(tong);
+</script>
+</body>
+</html>

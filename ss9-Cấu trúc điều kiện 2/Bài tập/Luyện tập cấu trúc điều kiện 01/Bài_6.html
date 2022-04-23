@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài_6</title>
+</head>
+<body>
+<script>
+    // 5% nếu tổng doanh số nhỏ hơn hoặc bằng 100 triệu.
+    // 10% nếu tổng doanh số nhỏ hơn hoặc bằng 300 triệu.
+    // 20 % nếu tổng doanh số là lớn hơn 300 triệu.
+    let dthu = parseFloat(prompt("Nhập doanh thu hằng tháng : ",''));;
+    let hoahong;
+    if (dthu <= 100){
+        hoahong = dthu*5/100;
+        alert("Với Doanh thu "+dthu+" tr thì hoa hong nhận được là "+hoahong);
+    }else if (dthu<=300){
+        hoahong = dthu*10/100;
+        alert("Với Doanh thu "+dthu+" tr thì hoa hong nhận được là "+hoahong);
+    }else {
+        hoahong = dthu * 20 / 100;
+        alert("Với Doanh thu " + dthu + " tr thì hoa hong nhận được là " + hoahong);
+    }
+</script>
+</body>
+</html>
