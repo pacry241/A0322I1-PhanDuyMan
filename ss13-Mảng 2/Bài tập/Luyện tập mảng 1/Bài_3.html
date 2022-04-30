@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài_3</title>
+</head>
+<body>
+<script>
+    let mang = [5,8,12,16,13,9,10,14,21,23,22];
+    let max = 0;
+    let total = 0, tb;
+    for (let i = 0; i < mang.length; i++){
+        if (mang[i] > max){
+            max = mang[i];
+        }
+        total = total + mang[i];
+    }
+    tb = total/mang.length;
+    document.write("Giá trị lớn nhất trong mảng là: "+ max+'<br>');
+    document.write("Giá trị trung bình của các phần tử là: "+ tb);
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài_5</title>
+</head>
+<body>
+<script>
+    let vowel_list = 'aeiouAEIOU';
+    let vcount = 0;
+    let str1 = prompt("Nhập một chuỗi văn bản bất kỳ");
+
+    for(let x = 0; x < str1.length ; x++)
+    {
+        if (vowel_list.indexOf(str1[x]) != -1)
+        {
+            vcount += 1;
+        }
+
+    }
+    document.write('có '+ vcount +' số nguyên âm');
+</script>
+</body>
+</html>

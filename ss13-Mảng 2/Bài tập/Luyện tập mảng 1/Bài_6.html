@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài_6</title>
+</head>
+<body>
+<script>
+    let mang = [];
+
+    for (let i = 0; i<10;i++){
+        mang[i]=parseInt(prompt("Nhập số nguyên thứ: "+ i));
+    }
+    let v = parseInt(prompt("Nhập Số V bất kỳ: "));
+
+        if (mang.indexOf(v) != -1 ){
+            document.write(v +' is in the array');
+        }else {
+            document.write(v + ' is not in the array');
+        }
+</script>
+</body>
+</html>

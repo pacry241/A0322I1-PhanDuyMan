@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài_4</title>
+</head>
+<body>
+<script>
+    let mang = [];
+    for (let i = 0; i<10;i++){
+        mang[i]=parseInt(prompt("Nhập số nguyên thứ: "+ i));
+    }
+    let first = 0;
+    let last = mang.length - 1;
+    while (first < last) {
+        let b = mang[first];
+        mang[first] = mang[last];
+        mang[last] = b;
+        first++;
+        last--;
+    }
+    document.write(mang);
+</script>
+</body>
+</html>
