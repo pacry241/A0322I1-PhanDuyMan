@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài_4</title>
+</head>
+<body>
+<script>
+    let i,j;
+    for (j=1;j<=7;j++){
+        if (j==1||j==7){
+            for (i=1;i<=21;i++){
+                document.write('&nbsp*');
+            }
+        }else {
+            document.write('*');
+            for (i=1;i<=20;i++){
+                document.write("&nbsp&nbsp&nbsp");
+            }
+            document.write('*');
+        }
+        document.write('<br>');
+
+    }
+</script>
+</body>
+</html>

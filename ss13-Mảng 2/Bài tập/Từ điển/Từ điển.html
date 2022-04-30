@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ Điển</title>
+</head>
+<body>
+
+    <input type="text" id="TA">
+    <button onclick="timkiem()" > Tìm kiếm</button>
+    <p id="kq">Kết quả</p>
+<script>
+    function timkiem() {
+        tieng_anh = ["red","blue","white","yellow"];
+        tieng_viet = ["đỏ","xanh","trắng","vàng"];
+        let input = document.getElementById("TA").value;
+        let index = tieng_anh.indexOf(input);
+        if (index != -1 ) {
+            document.getElementById("kq").innerText= tieng_viet[index];
+            alert(tieng_viet[index]);
+        } else {
+            document.getElementById("kq").innerText="không có";
+        }
+    }
+</script>
+</body>
+</html>
