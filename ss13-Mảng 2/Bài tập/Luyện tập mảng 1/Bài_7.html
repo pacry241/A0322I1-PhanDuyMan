@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bài_6</title>
+    <title>Bài_7</title>
 </head>
 <body>
 <script>
@@ -11,12 +11,11 @@
         mang[i]=parseInt(prompt("Nhập số nguyên thứ: "+ i));
     }
     let v = parseInt(prompt("Nhập Số V bất kỳ: "));
-
-        if (mang.indexOf(v) != -1 ){
-            document.write(v +' is in the array');
-        }else {
-            document.write(v + ' is not in the array');
-        }
+    if (mang.indexOf(v) != -1){
+        mang.splice(v,1);
+        mang.push(0);
+    }
+    document.write(mang);
 </script>
 </body>
 </html>
