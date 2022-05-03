@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài_3</title>
+</head>
+<body>
+<script>
+    let j = parseInt(prompt("Nhập kích thước của mảng"));
+    let arr =[];
+    for(let i = 0; i<j;i++){
+        arr[i]=prompt("Nhập ký tự bất kỳ");
+    }
+    let mang = ['2','a','b','c','d'];
+    let arr2 = '0123456789';
+    let count=0;
+    for (let x = 0 ; x< arr.length;x++){
+        if (arr2.indexOf(arr[x]) != -1){
+           count++;
+        }
+    }
+    document.write(count);
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài_4</title>
+</head>
+<body>
+<script>
+    let arr = prompt("Nhập chuỗi 1:");
+    let arr2 = prompt("Nhập chuỗi 2:");
+    let checker = 1;
+    if (arr.length == arr2.length) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] != arr2[i]) {
+                checker = 0;
+                break;
+            }
+        }
+        if (checker == 1) {
+            document.write("giống nhau");
+        } else {
+            document.write("khác nhau");
+        }
+    }else {
+        document.write("khác nhau");
+    }
+</script>
+</body>
+</html>
