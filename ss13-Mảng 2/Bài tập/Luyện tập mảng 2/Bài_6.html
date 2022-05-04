@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài_6</title>
+</head>
+<body>
+<script>
+    const num=window.prompt();
+    const str = num.toString();
+    const result = [];
+
+    for(let x=0; x<str.length; x++)
+    {
+        if(str[x] == '-')
+        {
+            result.push('_');
+        }
+        else
+        {
+            result.push(str[x]);
+        }
+    }
+    // console.log(result.join(''));
+    document.write(result);
+</script>
+</body>
+</html>

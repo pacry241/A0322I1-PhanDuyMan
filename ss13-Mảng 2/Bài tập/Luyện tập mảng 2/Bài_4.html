@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài_4</title>
+</head>
+<body>
+<script>
+    let arr = prompt("Nhập một chuỗi bất kỳ");
+    let soTu = 0;
+    for (let i = 0; i< arr.length - 1; i++){
+        if (arr[i] == " " && arr[i +1] != ' '){
+            soTu++;
+        }
+    }
+    if (arr[0] != ' '){
+        soTu++;
+    }
+    document.write(arr + '<br>' + "so từ là" + soTu );
+</script>
+</body>
+</html>
