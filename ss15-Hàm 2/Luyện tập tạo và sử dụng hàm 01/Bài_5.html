@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài_5</title>
+</head>
+<body>
+<script>
+    let arr = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe','Regulus'];
+    let arr1 =["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+    function kiemTra(x) {
+        if (arr.indexOf(x) != -1){
+            return arr1[arr.indexOf(x)];
+        }else {
+            alert("Không có tên");
+        }
+    }
+    let n = prompt("nhập tên ngôi sao");
+    let c = kiemTra(n);
+    document.write(c);
+
+</script>
+</body>
+</html>

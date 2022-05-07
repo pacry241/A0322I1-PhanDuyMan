@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài_5</title>
+</head>
+<body>
+<script>
+    function nhoNhat() {
+        let a1 = prompt("Nhập số thứ nhất: ");
+        let a2 = prompt("Nhập số thứ hai: ");
+        let a3 = prompt("Nhập số thứ ba: ");
+        let max = a1;
+       if (a2<a3){
+           if (a2<max){
+               max=a2
+           }else {
+               max=max;
+           }
+       }else {
+           if (a3<max){
+               max=a3
+           }else {
+               max=max;
+           }
+       }
+       document.write(max);
+    }
+    nhoNhat();
+
+</script>
+</body>
+</html>
