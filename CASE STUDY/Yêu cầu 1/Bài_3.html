@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài_3</title>
+</head>
+<body>
+<script>
+    let h = n = m =5;
+    for (let i = 1; i<=h;i++){
+        for (let j = 1; j<=2*h-1;j++){
+            if (j <=n && j>=m){
+                document.write("*");
+            }else {
+                document.write("&nbsp&nbsp");
+            }
+        }
+        m--;
+        n++;
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>

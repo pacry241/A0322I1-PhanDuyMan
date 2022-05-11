@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài_1</title>
+</head>
+<body>
+<script>
+    let tienluong = parseInt(prompt("Nhập tiền lương của bạn: "));
+    let tienthuc;
+    let tienthue;
+    let sothue;
+    if (tienluong > 15){
+        tienluong = parseInt(prompt("Nhập lại tiền lương của bạn: "));
+    }else if (tienluong == 15){
+        tienthue= tienluong*20/100;
+        sothue = 20;
+    }else if (tienluong <15 && tienluong >= 7){
+        tienthue = tienluong*10/100;
+        sothue = 10;
+    }else{
+        tienthue = tienluong*5/100;
+        sothue= 5;
+    }
+    tienthuc = tienluong-tienthue;
+    alert("Tiền thuế cá nhân là "+tienthue+" tr đồng với số thuế tương ứng "+sothue);
+    alert(' tiền còn lại của nhân viên là:'+ tienthuc);
+</script>
+</body>
+</html>
