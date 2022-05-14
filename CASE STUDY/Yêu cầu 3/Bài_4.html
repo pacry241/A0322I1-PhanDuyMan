@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài_4</title>
+</head>
+<body>
+<script>
+    let a = [1,2,3,4,5,6,7,8,9,0];
+    let b = ['Một','Hai','Ba','Bốn','Năm','Sáu','Bảy','Tám','Chín','Không'];
+    let c = [];
+    let arr = prompt("Nhập số: ");
+    for (let i=0; i<arr.length;i++){
+        if (a.indexOf(parseInt(arr[i])) != -1){
+            let index = a.indexOf(parseInt(arr[i]));
+            c.push(b[index]);
+            document.write(b[index]);
+        }
+    }
+    console.log(c);
+</script>
+</body>
+</html>

@@ -5,11 +5,48 @@
     <title>Xây dựng lớp mô tả hình chữ nhật</title>
 </head>
 <body>
+<canvas id="DemoCanvas" width="500" height="600"></canvas>
 <script>
     class Rectangle{
-        constructor() {
+        constructor(lenght, width ) {
+            this.length = lenght;
+            this.width= width;
+        }
+        setLength(length){
+            this.length= length;
+        }
+        setWidth(width){
+            this.width= width;
+        }
+        getLength(){
+            return this.length;
+        }
+        getWidth(){
+            return this.width;
+        }
+        getArea(){
+            return this.length* this.width;
+        }
+        getPerimeter(){
+            return 2*(this.length+ this.width);
+        }
+        drawRectangle(){
+            var canvas = document.getElementById("DemoCanvas");
+            if (canvas.getContext)
+            {
+                var ctx = canvas.getContext('2d');
+                ctx.fillStyle='#fa4b2a';    // color of fill
+                ctx.fillRect(10, 40, this.length, this.width); // create rectangle
+            }
         }
     }
+    let hinhChuNhat = new Rectangle(300,200);
+    hinhChuNhat.setLength(400);
+    hinhChuNhat.setWidth(300);
+    let Dtich = hinhChuNhat.getArea();
+    let Chvi = hinhChuNhat.getPerimeter();
+    console.log('Diện tích là: '+Dtich +' và Chu vi là: '+ Chvi);
+    hinhChuNhat.drawRectangle();
 </script>
 </body>
 </html>
