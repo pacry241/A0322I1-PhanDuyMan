@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài_2</title>
+</head>
+<body>
+<script>
+    let m = parseInt(prompt('Nhập M'));
+    let n = parseInt(prompt('Nhập N'));
+    let tong=0;
+    //Tạo mảng 2 chiều với số hàng là m và số cột là n;
+    let arr = new Array(m);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = new Array(n);
+    }
+
+    for (let x= 0;x<m;x++){
+        for (let y =0; y<n;y++){
+            arr[x][y]= parseInt(prompt('Nhập phần tử '+ "arr["+x+']['+y+']'));
+        }
+    }
+
+</script>
+</body>
+</html>

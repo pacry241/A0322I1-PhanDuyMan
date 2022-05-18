@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài_3</title>
+</head>
+<body>
+<script>
+    let arr = [5,2,5,2];
+    let arr1 = [6,3,4,1 ];
+    let a=0;
+    let index;
+    for (let i=0; i<arr.length;i++){
+        if (arr1[i] != 0){
+            let max = arr[i]/arr1[i];
+            if (max>a){
+                a=max;
+                index = i;
+            }
+        }
+    }
+    document.write(arr[index]+'/'+arr1[index]+'<br>');
+    document.write(index);
+
+</script>
+</body>
+</html>

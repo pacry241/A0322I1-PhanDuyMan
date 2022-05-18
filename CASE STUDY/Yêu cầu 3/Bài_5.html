@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài_5</title>
+</head>
+<body>
+    <button id="luachon1" onclick="luaChon(1)" value="Cafe">Cafe</button>
+    <button id="luachon2" onclick="luaChon(2)" value="2">Cam vắt</button>
+    <button id="luachon3" onclick="luaChon(3)" value="3">Nước ép cà rốt</button>
+    <button id="luachon4" onclick="luaChon(4)" value="4">Nước ép cà chua</button>
+    <button id="luachon5" onclick="luaChon(5)" value="5">Nước lọc</button>
+    <button id="luachon6" onclick="luaChon(6)" value="6">Nước dừa</button>
+    <button id="luachon7" onclick="luaChon(7)" value="7">Thoát gọi món</button>
+    <p id="xuatHoaDon"></p>
+    <p id="tongTien"></p>
+<script>
+    let tongTien = 0;
+    let tenMon = 'Hóa đơn <br>';
+    function luaChon(x){
+        if(x == 7){
+            alert('Tổng tiền phải trả là: '+tongTien+" USD");
+            tongTien = 0;
+            tenMon = 'Hóa đơn <br>';
+            document.getElementById('xuatHoaDon').innerHTML = "";
+            document.getElementById('tongTien').innerHTML = "";
+        }else{
+            let inputSoLuong = parseInt(prompt('Nhập số lương'));
+            switch (x){
+                case 1:
+                    tongTien += inputSoLuong*3;
+                    tenMon += 'Cafe số lương: '+inputSoLuong+' có giá: '+inputSoLuong*3+' USD';
+                    tenMon += '<br>';
+                    break;
+                case 2:
+                    tongTien += inputSoLuong*4;
+                    tenMon += 'Cam vắt số lương: '+inputSoLuong+' có giá: '+inputSoLuong*4+' USD';
+                    tenMon += '<br>';
+                    break;
+                case 3:
+                    tongTien += inputSoLuong*5;
+                    tenMon += 'Nước ép cà rốt số lương: '+inputSoLuong+' có giá: '+inputSoLuong*5+' USD';
+                    tenMon += '<br>';
+                    break;
+                case 4:
+                    tongTien += inputSoLuong*6;
+                    tenMon += 'Nước ép cà chua số lương: '+inputSoLuong+' có giá: '+inputSoLuong*6+' USD';
+                    tenMon += '<br>';
+                    break;
+                case 5:
+                    tongTien += inputSoLuong*7;
+                    tenMon += 'Nước lọc số lương: '+inputSoLuong+' có giá: '+inputSoLuong*7+' USD';
+                    tenMon += '<br>';
+                    break;
+                case 6:
+                    tongTien += inputSoLuong*8;
+                    tenMon += 'Nước dừa số lương: '+inputSoLuong+' có giá: '+inputSoLuong*8 +' USD';
+                    tenMon += '<br>';
+                    break;
+            }
+            document.getElementById('xuatHoaDon').innerHTML = tenMon;
+            document.getElementById('tongTien').innerHTML = "Tổng tiền phải trả là : "+tongTien+ " USD";
+        }
+    }
+
+</script>
+
+</body>
+</html>
