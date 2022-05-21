@@ -7,6 +7,22 @@
 <body>
 <script>
 
+    let a = "----phan-----man----duy"
+    let arr = a.trimStart().split('');
+    let arr1 =[];
+    for (let i = 0; i<arr.length;i++){
+           if (arr[i] != '-' && arr[i+1] =='-'){
+               arr1.push(arr[i]);
+           }else if (arr[i] == '-'&& arr[i+1]== '-'){
+               arr.splice(arr[i],1);
+           } else if (arr[i]== '-'&& arr[i] !='-'){
+               arr1.push('-');
+           }else {
+               arr1.push(arr[i]);
+           }
+    }
+        console.log(arr1);
+
 </script>
 </body>
 </html>
