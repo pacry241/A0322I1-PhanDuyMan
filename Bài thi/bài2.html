@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài2</title>
+</head>
+<body>
+<script>
+    let number_1 = parseInt(prompt("Nhập số thứ nhất: "));
+    let number_2 = parseInt(prompt("Nhập số thứ hai: "));
+    while (true){
+        if (number_1 <=0 || number_2<=0){
+            number_1 = parseInt(prompt("Nhập lại số thứ nhất: "));
+            number_2 = parseInt(prompt("Nhập lại số thứ hai: "));
+        }else {
+            console.log('Số thứ nhất là : '+ number_1);
+            console.log('Số thứ hai là: '+ number_2);
+            break;
+        }
+    }
+    function check(a,b){
+        let sum_1 =0, sum_2=0;
+        for (let i= 1; i<=a/2; i++){
+            if (a % i == 0){
+                sum_1+=i;
+            }
+        }
+        for (let j=1; j<= b/2;j++){
+            if (b % j == 0){
+                sum_2 += j;
+            }
+        }
+        if (a == sum_2 || b == sum_1){
+            return true;
+        }else {
+            return false;
+        }
+    }
+    let kqua = check(number_1,number_2);
+    console.log(kqua);
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài3</title>
+</head>
+<body>
+<script>
+    class Book {
+        constructor(code_Book, nameBook, yearBook, amountBook, stateBook ) {
+            this.code= code_book;
+            this.name= name_book;
+            this.year= yearBook;
+            this.amount = amountBook;
+            this.state = stateBook;
+        }
+        setCodeBook(code_Book){
+            this.code = code_Book;
+        }
+        setNameBook(name){
+            this.name= name;
+        }
+        setYear(year){
+            this.year= year;
+        }
+        setAmount(amount){
+            this.amount= amount;
+        }
+        setState(state){
+            this.state=state;
+        }
+        getCodeBook(){
+            return this.code;
+        }
+        getNameBook(){
+            return this.name;
+        }
+        getYear(){
+            return this.year;
+        }
+        getAmount(){
+            return this.amount;
+        }
+        getState(){
+            return this.state;
+        }
+        borrowBook(){
+            this.amount --;
+        }
+        restoreBook(){
+            this.amount ++;
+        }
+        checkBook(){
+            if (this.amount = 0){
+                this.state = false;
+            }
+        }
+
+    }
+    function addBook() {
+        var name = prompt("Nhập tên sách");
+        var year = prompt("Nhập năm xuất bản");
+        var amount = prompt("Nhập số lượng");
+        if (year >10000){
+            year = prompt("Nhập lại năm sản xuất");
+        }
+    }
+    addBook();
+    let book1 = new Book(12345,'Toán',2000,3,true)
+    let book2 = new Book(23456,'Văn',1998,4,true)
+    let book3 = new Book(37456,'Tiếng Anh',1999,5,false);
+
+</script>
+</body>
+</html>

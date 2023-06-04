@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài1</title>
+</head>
+<body>
+<script>
+    let amount = parseInt(prompt("Nhập số lượng phần tử"));
+    if (amount >50|| amount<=0){
+        amount = parseInt(prompt("Nhập số lượng phần tử"));
+    }
+    let arr = [];
+    for (let i =0 ; i <amount;i++){
+        arr[i]=parseInt(prompt("Nhập phần tử thứ "+ i));
+    }
+
+    let sum = 0;
+    let medium, count=0;
+    for (let j = 0; j<arr.length; j+=2){
+        let ktra = arr[j]%2 != 0;
+        if (ktra){
+            sum+=arr[j];
+            count++;
+        }
+    }
+    medium= sum/count;
+    console.log('Số lượng phần tử là ' + amount);
+    console.log("Trung bình cộng các số lẻ ở vị trí chẵn là : "+ medium);
+    console.log(arr.join(','));
+
+</script>
+</body>
+</html>

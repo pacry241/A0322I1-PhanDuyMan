@@ -6,7 +6,19 @@
 </head>
 <body>
 <script>
-
+    // Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.
+    let money = parseInt(prompt("nhập số tiền gửi (VNĐ):"));
+    let month = parseInt(prompt("nhập số tháng gửi:"));
+    let interest = parseInt(prompt("nhập số lãi suất:"))
+    let profit;
+    interest = interest/100
+    let total =0 ;
+    for (let i = 1; i <= month;i++){
+        profit = money *interest;
+        money += profit
+        total = money
+    }
+    alert("tiền lãi mới là:"+total +"VND");
 </script>
 </body>
 </html>
